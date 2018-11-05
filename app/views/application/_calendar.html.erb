@@ -12,7 +12,8 @@
       },
       eventRender: function( event, element, view ){
         element.qtip({
-          content: event.tooltip,
+          content: event.tooltip({
+            position: { my: "left+15 center", at: "right center" }),
           style: {
             classes: 'qtip-shadow'
           }
