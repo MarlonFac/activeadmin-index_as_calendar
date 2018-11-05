@@ -19,12 +19,12 @@
         element.qtip({
           content: event.tooltip,
           style: {
-            classes: 'qtip-shadow'},
-          position: {
-            my: 'right top',  // Position my top left...
-            at: 'left bottom', // at the bottom right of...
-            target: $(element) // my target
-          }
+            classes: 'qtip-shadow'}
+//          ,position: {
+//            my: 'right top',  // Position my top left...
+//            at: 'left bottom', // at the bottom right of...
+//            target: $(element) // my target
+//          }
         });
       },
       events: <%= events.to_json.html_safe %>
