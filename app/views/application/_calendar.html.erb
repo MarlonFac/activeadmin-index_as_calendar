@@ -1,6 +1,11 @@
 <div id="fullCalendar"></div>
 
 <script>
+    var custom_position = {corner: {
+      target: "rightMiddle",
+      tooltip: "leftMiddle"
+    }};
+
 	$(function(){
     // Default options for fullCalendar goes here
     default_options = {
@@ -15,7 +20,7 @@
           content: event.tooltip,
           style: {
             classes: 'qtip-shadow'
-          }
+          }, position: custom_position
         });
       },
       events: <%= events.to_json.html_safe %>
