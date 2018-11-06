@@ -2,8 +2,8 @@
 
 <script>
     var custom_position = {corner: {
-      target: "rightMiddle",
-      tooltip: "leftMiddle"
+      my: "bottom center",
+      at: "bottom center"
     }};
 
 	$(function(){
@@ -18,10 +18,15 @@
       eventRender: function( event, element, view ){
         element.qtip({
           content: event.tooltip,
-          placement: 'top',
+//          position: {corner: {tooltip: 'bottomLeft', target: 'topRight'}},
+          position:{
+            my:'bottom center',
+            at:'bottom center'
+          },
           style: {
-            classes: 'qtip-shadow myStyle'}
-            , position: custom_position
+            classes: 'qtip-shadow myStyle'
+          },
+          tip: 'topLeft'
 //          ,position: {
 //            my: 'right top',  // Position my top left...
 //            at: 'left bottom', // at the bottom right of...
